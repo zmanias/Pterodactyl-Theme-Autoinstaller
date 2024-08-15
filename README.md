@@ -10,12 +10,14 @@
 bash <(curl -s https://raw.githubusercontent.com/Foxstoree/pterodactyl-auto-installer/main/install.sh)
 ```
 
-## Thema Pterodactyl :
+## Fitur Tools :
 
-- thema stellar
-- thema billing
-- thema enigma
-- uninstall thema
+- Install Tema Stellar
+- Install Tema Billing
+- Install Tema Enigma
+- Uninstall Tema
+
+(Kode Token : skyzodev)
 
 ## System Support :
 
