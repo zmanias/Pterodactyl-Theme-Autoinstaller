@@ -1,20 +1,13 @@
 #!/bin/bash
 
-# Minta input dari pengguna.
-echo "Masukkan nama lokasi: "
-location_name=$(echo) 
-echo "Masukkan deskripsi lokasi: " 
-location_description=$(echo) 
-echo "Masukkan domain: "
-domain=$(echo) 
-echo "Masukkan nama node: "
-node_name=$(echo) 
-echo "Masukkan RAM (dalam MB): " 
-ram=$(echo) 
-echo "Masukkan jumlah maksimum disk space (dalam MB): " 
-disk_space=$(echo) 
-echo "Masukkan Locid: " 
-locid=$(echo) 
+# Minta input dari pengguna
+read -p "Masukkan nama lokasi: " location_name
+read -p "Masukkan deskripsi lokasi: " location_description
+read -p "Masukkan domain: " domain
+read -p "Masukkan nama node: " node_name
+read -p "Masukkan RAM (dalam MB): " ram
+read -p "Masukkan jumlah maksimum disk space (dalam MB): " disk_space
+read -p "Masukkan Locid: " locid
 
 # Ubah ke direktori pterodactyl
 cd /var/www/pterodactyl || { echo "Direktori tidak ditemukan"; exit 1; }
