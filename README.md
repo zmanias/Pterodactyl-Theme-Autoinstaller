@@ -7,7 +7,7 @@
 ## Command Install :
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/SkyzoOffc/Pterodactyl-Theme-Autoinstaller/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/SkyzoOffc/main/Pterodactyl-Theme-Autoinstaller/install.sh)
 ```
 
 ## Fitur Tools :
