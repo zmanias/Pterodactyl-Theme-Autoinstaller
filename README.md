@@ -17,7 +17,7 @@ bash <(curl -s https://raw.githubusercontent.com/Foxstoree/pterodactyl-auto-inst
 - Install Tema Enigma
 - Uninstall Tema
 
-(Kode Token : skyzodev)
+ (Kode Token : skyzodev)
 
 ## System Support :
 
