@@ -61,7 +61,6 @@ check_token() {
   echo -e "${BLUE}[+]               LICENSY SKYZO OFFC             [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  TOKEN=$(jq -r '.token' token.json)
 
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
