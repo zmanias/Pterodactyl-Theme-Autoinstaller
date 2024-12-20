@@ -62,7 +62,7 @@ check_token() {
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" = "skyzodev" ]; then
+  if [ "$USER_TOKEN" = "fandirr" ]; then
     echo -e "${GREEN}AKSES BERHASIL${NC}}"
   else
     echo -e "${GREEN}Token Salah! Beli Kode Token Di Skyzopedia${NC}"
