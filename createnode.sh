@@ -35,7 +35,7 @@ https
 $domain
 yes
 no
-no
+yes
 $ram
 $ram
 $disk_space
